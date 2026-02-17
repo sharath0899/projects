@@ -1,0 +1,83 @@
+🫁 Lung Cancer Treatment Escalation Analysis
+Identifying a Hidden Health Data Science Gap Using Clinical Feature Engineering & Visualization
+📌 Project Overview
+This project analyzes a large lung cancer dataset to identify a hidden clinical risk subgroup that was not explicitly represented in the raw data. Although the dataset contains rich treatment, imaging, molecular, and clinical variables, it lacks integrated, actionable indicators to support proactive decision-making.
+Using clinically informed feature engineering and visualization, this project uncovers patterns of treatment escalation and tumor aggressiveness that were previously invisible.
+❗ Problem / Health Data Science Gap
+Healthcare datasets often record detailed variables (e.g., individual therapies, biomarkers, imaging features), but fail to summarize them into interpretable, clinically meaningful indicators.
+In this dataset:
+Treatment intensity was recorded only as separate therapy flags
+Tumor aggressiveness was scattered across imaging, PET, and molecular variables
+No early-warning or pre-escalation risk signal existed
+👉 As a result, a high-risk subgroup of patients was hidden in plain sight.
+
+✅ Solution Approach
+This project bridges that gap by creating three clinically meaningful constructs:
+1️⃣ Treatment Burden Index
+A weighted score summarizing overall treatment intensity across:
+Chemotherapy
+Immunotherapy
+Targeted therapy
+Radiation therapy
+
+2️⃣ Multimodal Tumor Aggressiveness Score
+An integrated biology score built from:
+Radiomics features
+PET imaging metrics
+Molecular markers (e.g., PD-L1, tumor mutational burden)
+
+3️⃣ Pre-Escalation Risk Flag
+A binary indicator identifying patients with:
+High treatment burden and
+High tumor aggressiveness or advanced stage
+This flag enables early identification of patients at risk of treatment escalation.
+
+📊 Key Visualizations
+The analysis is supported by clear, interpretable graphs:
+Bar Chart: Treatment Burden Gap between low-risk and high-risk patients
+Line Chart: Therapy utilization differences across treatment modalities
+Scatter Plots:
+Tumor aggressiveness vs. treatment burden
+With and without jitter to reveal patient-level patterns
+These visualizations transform raw clinical data into actionable insights.
+
+🔍 Key Findings
+~25% of patients form a distinct high-risk subgroup
+High-risk patients show:
+~3× higher treatment burden
+Consistent escalation across all therapy types
+Higher tumor aggressiveness and disease severity
+These patterns existed in the data but were not identifiable without feature engineering
+
+🧠 Why This Matters
+Demonstrates the value of clinical reasoning + data science
+Moves beyond black-box modeling to interpretable decision support
+Highlights how Health Data Science can support proactive, rather than reactive, care
+Applicable to:
+Clinical analytics
+Oncology informatics
+Pharmacist-led medication safety initiatives
+
+🛠️ Tools & Technologies
+Python
+Pandas, NumPy
+Matplotlib
+Google Colab / Jupyter Notebook
+
+📂 Repository Structure
+├── data/
+│   └── LungCanC2024_Dataset.csv
+├── notebooks/
+│   └── lung_cancer_treatment_escalation_analysis.ipynb
+├── figures/
+│   └── treatment_burden_and_risk_visualizations.png
+└── README.md
+
+🚀 Future Extensions
+Survival analysis by pre-escalation risk group
+Explainable ML models for escalation prediction
+Integration into clinical dashboards
+Validation on external oncology datasets
+
+✨ Key Takeaway
+Rich healthcare datasets are often silent. Clinically informed feature engineering and visualization are what turn data into decisions.
